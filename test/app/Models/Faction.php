@@ -128,4 +128,12 @@ class Faction
         
         return $str;
     }
+    
+    public function getGuides() : array {
+
+        $records = DB::select('select * from guide '.
+            ' where fk_faction_id = ?', array($this->id));
+        
+        return $records;
+    }
 }
