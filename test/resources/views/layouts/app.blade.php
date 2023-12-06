@@ -39,10 +39,10 @@
         		<div class="flex">        			        		                	
                     
                     <ul>
-        				<li><a href="">Factions</a></li>        				
-        				<li><a href="">Players</a></li>
-        				<li><a href="">Next Event</a></li>
-        				<li><a href="">Strategy Guides</a></li>
+        				<li><a href="/factions">Factions</a></li>        				
+        				<li><a href="/players">Players</a></li>
+        				<li><a href="/events">Next Event</a></li>
+        				<li><a href="/strategy">Strategy Guides</a></li>
         			</ul>
                 </div>
 			</div>                
