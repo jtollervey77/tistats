@@ -15,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'App\Http\Controllers\MainController@index');
-
+Route::get('/factions', 'App\Http\Controllers\FactionsController@index');
+Route::get('/players', 'App\Http\Controllers\PlayersController@index');
+Route::get('/strategy', 'App\Http\Controllers\StrategyController@index');
 
 Route::get('/player/{id}', ['App\Http\Controllers\PlayerController', 'index']);
 Route::get('/faction/{id}', ['App\Http\Controllers\FactionController', 'index']);

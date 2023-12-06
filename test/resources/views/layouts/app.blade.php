@@ -20,23 +20,40 @@
     <body>
         <div class="">
         
-        	<div class="flex">
-        		<a href="/"><img src="/resources/img/ti.png" /></a>
+        	<div class="flex header">
+        	
+        		<div class="flex">
+            		<a href="/"><img src="/resources/img/ti.png" /></a>
+            		
+            		<form method="post">
+                    	<label for="username">Username</label>
+                    	<input name="username" type="text" />
+                    	
+                    	<label for="password">Password</label>
+                    	<input name="password" type="password" />
+                    	<br/>
+                    	<input type="submit" />
+                    </form>
+				</div>                    
         
-            	<form method="post">
-                	<label for="username">Username</label>
-                	<input name="username" type="text" />
-                	
-                	<label for="password">Password</label>
-                	<input name="password" type="password" />
-                	<br/>
-                	<input type="submit" />
-                </form>
+        		<div class="flex">        			        		                	
+                    
+                    <ul>
+        				<li><a href="">Factions</a></li>        				
+        				<li><a href="">Players</a></li>
+        				<li><a href="">Next Event</a></li>
+        				<li><a href="">Strategy Guides</a></li>
+        			</ul>
+                </div>
 			</div>                
             
             <div class="content">
             	@section('content')                
             	@show            	
+            </div>
+            
+            <div class="footer">
+            	
             </div>
         </div>
     </body>

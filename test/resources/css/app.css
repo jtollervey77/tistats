@@ -1,3 +1,8 @@
+* {font-family : "Open Sans", sans-serif}
+
+.header img {height:150px}
+.header li {display: inline-block; margin-right:20px;}
+
 .box {
 	padding : 20px;
 }
@@ -17,11 +22,123 @@
 	padding :20px;
 }
 
-.grid {
+.grid-main {
 	display: grid;
-	grid-template-columns: 200px 200px 200px;
+	grid-template-columns: 50% 50%;
 	grid-gap: 10px;
 	padding-bottom : 40px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-gap: 10px;
+	padding-bottom : 40px;
+}
+
+
+
+.header {
+	border-bottom : 1px solid #ccc;
+	margin-bottom:20px;
+}
+
+.header form {
+	padding-bottom : 0px;
+}
+
+.footer {
+	margin-top:20px;
+	min-height:100px;
+	border-top : 1px solid #ccc
+}
+
+
+
+.faction .faction-img {	
+	height:80px;
+	width:80px;
+			
+ 	background-image:url("/resources/img/factions.png"); 	
+	background-repeat: no-repeat;
+	
+	margin-bottom : 10px; 	
+}
+
+.img-arborec {	
+	background-position: top -320px left -80px;		 	
+}
+.img-argent {	
+	background-position: top 0px left 0px;		 	
+}
+.img-letnev {	
+	background-position: top -400px left 0px;		 	
+}
+.img-muaat {	
+	background-position: top -320px left 0px;		 	
+}
+.img-saar {	
+	background-position: top -160px left -80px;		 	
+}
+.img-keleres {	
+	background-position: top -400px left -80px;		 	
+}
+.img-hacan {	
+	background-position: top -240px left 0px;		 	
+}
+.img-empyrean {	
+	background-position: top 0px left -320px;		 	
+}
+.img-sol {	
+	background-position: top -80px left -80px;		 	
+}
+.img-ghosts {	
+	background-position: top -320px left -160px;		 	
+}
+.img-l1z1x {	
+	background-position: top -240px left -160px;		 	
+}
+.img-mahact {	
+	background-position: top -80px left 0px;		 	
+}
+.img-mentak {	
+	background-position: top -240px left -480px;		 	
+}
+.img-naalu {	
+	background-position: top -240px left -400px;		 	
+}
+.img-naaz {	
+	background-position: top -80px left -160px;		 	
+}
+.img-nekro {	
+	background-position: top -240px left -240px;		 	
+}
+.img-nomad {	
+	background-position: top -160px left -240px;		 	
+}
+.img-sardakk {	
+	background-position: top -320px left -240px;		 	
+}
+.img-titans {	
+	background-position: top -0px left -160px;		 	
+}
+.img-jolnar {	
+	background-position: top -160px left -160px;		 	
+}
+.img-cabal {	
+	background-position: top -240px left -240px;		 	
+}
+.img-winnu {	
+	background-position: top -0px left -80px;		 	
+}
+.img-xxcha {	
+	background-position: top -0px left -240px;		 	
+}
+.img-yin {	
+	background-position: top -240px left -320px;		 	
+}
+.img-yssaril {	
+	background-position: top -160px left -0px;		 	
 }
 
 

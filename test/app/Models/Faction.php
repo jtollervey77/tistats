@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\DB;
 
 class Faction 
 {    
+    use MiscMaths;
+    
     public String $name;
     public String $shortName;
     
@@ -34,32 +36,11 @@ class Faction
                 $this->positions[$game->position]++;
             }
         }
-    }
-    
-    
-    private function figureDeviation() {
-        
-        $data = array();
-        
-        array_walk($this->games, function($val) use(&$data) {
-            if(!isset($data[$val->player])) {
-                $data[$val->player] = 0;
-            }
-            $av = ($val->players+1) / 2;
-            $deviation = 0;
-            //no I dont know how to do standard deviation - for my own needs though close enough
-            if($val->position != $av) $deviation = $av - $val->position;
-            else $deviation = 0;
-                                    
-            $data[$val->player] += $deviation;
-        });
-            
-        $this->deviation = $data;
-    }
+    }    
     
     public function getDeviation() : int {
         $deviation = 0;
-        if(!$this->deviation) $this->figureDeviation();
+        if(!$this->deviation) $this->figureDeviation("player");
         
         foreach ($this->deviation as $key=>$value) {
             $deviation += $value;
@@ -115,7 +96,7 @@ class Faction
     
     public function getBestAs() : bool|String {
         
-        if(!$this->deviation) $this->figureDeviation();
+        if(!$this->deviation) $this->figureDeviation("player");
         
         $data = $this->deviation;
         if(!count($data)) return false;
@@ -133,7 +114,7 @@ class Faction
     
     public function getWorstAs() : bool|String {
         
-        if(!$this->deviation) $this->figureDeviation();
+        if(!$this->deviation) $this->figureDeviation("player");
         
         $data = $this->deviation;
         if(!count($data)) return false;
