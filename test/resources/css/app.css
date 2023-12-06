@@ -1,0 +1,32 @@
+.box {
+	padding : 20px;
+}
+
+.content {
+	padding : 20px;	
+}
+
+.flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content : space-between;
+}
+
+.flex > * {
+	padding :20px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 200px 200px 200px;
+	grid-gap: 10px;
+	padding-bottom : 40px;
+}
+
+
+@media (max-width:640px) {
+	.grid {
+		grid-template-columns: 33% 33% 33%
+	}	
+}

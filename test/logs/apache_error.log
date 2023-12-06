@@ -1,0 +1,4 @@
+[Tue Dec 05 15:27:54.751509 2023] [autoindex:error] [pid 11772:tid 1316] [client 127.0.0.1:58070] AH01276: Cannot serve directory C:/Users/Jon/workspace/test/: No matching DirectoryIndex (index.php) found, and server-generated directory index forbidden by Options directive
+[Tue Dec 05 16:37:51.723412 2023] [php:error] [pid 4492:tid 1304] [client 127.0.0.1:58502] script 'C:/Users/Jon/workspace/test/index.php' not found or unable to stat
+[Tue Dec 05 17:51:03.924708 2023] [php:error] [pid 4492:tid 1304] [client 127.0.0.1:59033] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\\Users\\Jon\\workspace\\test\\vendor\\composer\\ClassLoader.php on line 429
+[Tue Dec 05 18:53:23.856325 2023] [php:error] [pid 14212:tid 1332] [client 127.0.0.1:60496] PHP Fatal error:  Readonly property App\\Models\\Player::$id must have type in C:\\Users\\Jon\\workspace\\test\\app\\Models\\Player.php on line 9
