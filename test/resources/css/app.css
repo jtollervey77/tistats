@@ -33,7 +33,7 @@
 	padding-bottom : 40px;
 }
 
-.readmore {
+.read-more .cta-content {
    overflow: hidden;
    text-overflow: ellipsis;
    /* TODO test browser compliance here */
@@ -43,7 +43,11 @@
    -webkit-box-orient: vertical;
 }
 
+.block {display: block!important;}
+
 .box-shadow {box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
+input,textarea,select,.uneditable-input{border:0px; -webkit-box-shadow:none!important; box-shadow: none!important;}
+input[type="checkbox"] {width:26px!important;height:26px!important}
 
 .red {color:red}
 .green {color:forestgreen}
@@ -54,13 +58,13 @@
 	margin-bottom:20px;
 	background-image:  url("/resources/img/ti2.jpg");
 	background-size: cover;
-	min-height:200px;		
+	min-height:246px;
+	background-position-y: -34px;		
 }
 
 .header .form_container {
 	padding : 8px;					
 }
-
 
 .menu a, .header label {
 	font-size: 16px;
@@ -79,7 +83,7 @@
 }
 
 .footer {background: linear-gradient(to left, #f46b45, #eea849);}
-.footer img {float: left; display: inline-block; height:80px}
+.footer img {display: inline-block; height:80px}
 
 
 
@@ -193,14 +197,22 @@ table.player_stats td{width:150px;}
 }
 
 
-@media (max-width:640px) {
+@media (max-width:1024px) {
 	.grid {
-		grid-template-columns: 32% 32% 32% 32%
+		grid-template-columns: 50% 50%;		
 	}
 	
-	.desktop {display:none}
+	.desktop {display:none}	
+	.mobile {display : block}
 	
-	.mobile {display : block}	
+	.event > input[type="checkbox"] {margin-bottom:30px;}
+}
+
+@media (max-width:800px) {
+	.grid {
+		grid-template-columns: 100%
+	}
+		
 }
 
 

@@ -43,21 +43,7 @@
             </ul>
           </section>
         
-        	<div class="header">
-        	
-        		<div class="form_container">            		            		
-            		<form method="post">
-                    	<label for="username">Username</label>
-                    	<input name="username" type="text" />
-                    	
-                    	<label for="password">Password</label>
-                    	<input name="password" type="password" />
-                    	<br/>
-                    	<input type="submit" />
-                    </form>
-				</div>                    
-        
-        
+        	<div class="header desktop">            
 			</div>                
             
             <div class="content">

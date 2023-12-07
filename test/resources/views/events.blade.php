@@ -11,27 +11,33 @@
 
 <h4>Record game</h4>
 <form>
-	<label>Players</label>
+	<label>#Players</label>
 	<select name="players">
 		<?php for($i=1;$i<=6;$i++) { ?>
 		<option value="<?= $i?>"><?= $i?></option>
 		<?php } ?>
 	</select>	
-	<label>Players</label>
-	<?php for($i=1;$i<=6;$i++) { ?>
-	<select name="player-<?=$i?>">
-	</select>
-		
-	<select name="race-<?=$i?>">
-	</select>
+	<br/><br/>
 	
-	<input name="points" />	
+	<div class="grid event desktop">
+    	<label>Players</label>
+    	<label>Race</label>
+    	<label>Points</label>
+    	<label>Won?</label>    	
+	</div>
+	<div class="grid event">
+		<?php for($i=1;$i<=6;$i++) { ?>
+    	<select name="player-<?=$i?>">
+    	</select>
+    	<select name="race-<?=$i?>">    	
+    	</select>
+    	<input name="points" />
+    	<input type="checkbox" name="won" />
+    	<?php } ?>      	  	    	    		  
+	</div>    	    	    	    	
 	
-	<input type="checkbox" name="won" />
-	
-	<br/>	
-	<?php } ?>
-		
+	<label>Admin Password</label>		
+	<input type="password" />		
 	<input type="submit" />
 </form>
 

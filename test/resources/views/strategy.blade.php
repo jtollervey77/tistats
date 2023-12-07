@@ -12,13 +12,15 @@
 			<div class="faction-img img-{{ $datum->getURLName() }}"></div>
 			<p><a href="/faction/{{ $datum->getURLName() }}">{{ $datum->getName() }}</a></p>
 			
-			@foreach ($datum->getGuides() as $guide)
-			<p>
-				<h4>{{ $guide->name }} {{ $guide->pok?"POK":"Non POK"}}</h4>
-				<span class="readmore">					
-					<?php include $_SERVER['DOCUMENT_ROOT']."/resources/guides/".$guide->file  ?>					
-				</span>
-			</p>
+			@foreach ($datum->getGuides() as $guide)			
+			<h4>{{ $guide->name }} {{ $guide->pok?"POK":"Non POK"}}</h4>
+			<div class="read-more">					
+				<a href="#" class="cta">Read more</a><br/>
+				<div class="cta-content">
+				<?php include $_SERVER['DOCUMENT_ROOT']."/resources/guides/".$guide->file  ?>
+				</div>									
+			</div>			
+			<br/>
 			@endforeach		
 		</div>			
 	</div>	
