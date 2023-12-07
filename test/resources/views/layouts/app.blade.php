@@ -56,7 +56,7 @@
             </div>
             
             <div class="footer">            	
-            	<img src="/resources/img/warsun.png" />
+            	<div><img class="transition" src="/resources/img/warsun.png" /></div>
             </div>        
     </body>
 </html>

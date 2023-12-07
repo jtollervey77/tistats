@@ -12,7 +12,11 @@ class EventsController extends Controller
 {
 	
     public function index() : view {
-        return view('events');
+        
+        $players = DB::select('select * from player order by name ASC');                
+        $factions = DB::select('SELECT *, trim(replace(name, "The", "")) as sortname from faction order by sortname ASC');        
+        
+        return view('events', array("players"=>$players, "factions"=>$factions));
     }
     
     public function update()

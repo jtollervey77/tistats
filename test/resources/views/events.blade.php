@@ -10,12 +10,12 @@
 <br/><br/>
 
 <h5>Record game</h5>
-<form method="post" action="/event/update">
+<form method="post" action="/event/update" class="form-event">
 	@csrf <!-- {{ csrf_field() }} -->
 	<label>#Players</label>
 	<select name="players" required="required">
 		<?php for($i=1;$i<=6;$i++) { ?>
-		<option value="<?= $i?>"><?= $i?></option>
+		<option <?= $i==6?'selected=selected':''?> value="<?= $i?>"><?= $i?></option>
 		<?php } ?>
 	</select>	
 	<br/><br/>
@@ -28,12 +28,20 @@
 	</div>
 	<div class="grid event">
 		<?php for($i=1;$i<=6;$i++) { ?>
-    	<select name="player-<?=$i?>">
+    	<select required="required" name="player-<?=$i?>" data-players="<?=$i?>">
+    	<option selected="selected" disabled="disabled"></option>
+    	@foreach ($players as $player)
+    		<option value="{{ $player->name }}">{{ $player->name }}</option>
+    	@endforeach
     	</select>
-    	<select name="race-<?=$i?>">    	
+    	<select required="required" name="faction-<?=$i?>" data-players="<?=$i?>">
+    	<option selected="selected" disabled="disabled"></option>
+    	@foreach ($factions as $faction)
+    		<option value="{{ $faction->name }}">{{ $faction->name }}</option>
+    	@endforeach    	
     	</select>
-    	<input name="points" />
-    	<input type="checkbox" name="won" />
+    	<input required="required" name="points" class="small" data-players="<?=$i?>"/>
+    	<input required="required" type="checkbox" name="won" data-players="<?=$i?>"/>
     	<?php } ?>      	  	    	    		  
 	</div>    	    	    	    	
 	

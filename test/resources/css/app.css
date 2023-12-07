@@ -48,8 +48,11 @@
 .box-shadow {box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
 
 /*bootstrap madness*/
-input,textarea,select,.uneditable-input{border: 1px solid #ccc;}
+input,textarea,select,.uneditable-input{border: 1px solid #ccc;min-height:16px;}
 input[type="checkbox"] {width:16px!important;}
+
+
+input.small {width:100px}
 
 .red {color:red}
 .green {color:forestgreen}
@@ -84,10 +87,22 @@ input[type="checkbox"] {width:16px!important;}
 	border-top : 1px solid #ccc
 }
 
+.footer img {
+	position: relative;
+}
+
+.footer img.transition {
+	transition: right 3s ease-in-out;    
+}
+
 .footer {background: linear-gradient(to left, #f46b45, #eea849);}
-.footer img {display: inline-block; height:80px}
+.footer div {width:calc(100% - 200px);display: block; height:80px; margin-left:0px; transition: margin-left 5s;}
+.footer div:hover {margin-left:200px}
+.footer div img {height: 100%;}
 
 
+
+.event {grid-template-columns: 24% 24% 100px 100px;}
 
 .faction {
 	background-color:  #ccc;
@@ -114,6 +129,12 @@ input[type="checkbox"] {width:16px!important;}
 }
 .faction a >p:not(:first-of-type) {
 	color:black;
+	text-decoration: none;
+}
+.faction a >p:first-of-type {
+	text-decoration: underline;
+}
+.faction a {
 	text-decoration: none;
 }
 
@@ -206,9 +227,7 @@ table.player_stats td{width:150px;}
 	}
 	
 	.desktop {display:none}	
-	.mobile {display : block}
-	
-	.event > input[type="checkbox"] {margin-bottom:30px;}
+	.mobile {display : block}		
 }
 
 @media (max-width:800px) {
