@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h4>Home > Factions</h4><br/>
+<p>Home > Factions</p><br/>
 @include('factions_partial') 
 
 @endsection

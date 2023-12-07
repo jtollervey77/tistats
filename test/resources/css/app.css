@@ -46,8 +46,10 @@
 .block {display: block!important;}
 
 .box-shadow {box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;}
-input,textarea,select,.uneditable-input{border:0px; -webkit-box-shadow:none!important; box-shadow: none!important;}
-input[type="checkbox"] {width:26px!important;height:26px!important}
+
+/*bootstrap madness*/
+input,textarea,select,.uneditable-input{border: 1px solid #ccc;}
+input[type="checkbox"] {width:16px!important;}
 
 .red {color:red}
 .green {color:forestgreen}
@@ -112,6 +114,7 @@ input[type="checkbox"] {width:26px!important;height:26px!important}
 }
 .faction a >p:not(:first-of-type) {
 	color:black;
+	text-decoration: none;
 }
 
 .strategy {padding:10px;margin-bottom:10px}

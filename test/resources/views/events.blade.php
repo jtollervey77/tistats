@@ -2,17 +2,18 @@
 
 @section('content')
 
-<h4>Home > Events</h4>
+<p>Home > Events</p>
 <br/>
 
 <h4>Next event : 30/12/2023 @ Chris'</h4>
 
 <br/><br/>
 
-<h4>Record game</h4>
-<form>
+<h5>Record game</h5>
+<form method="post" action="/event/update">
+	@csrf <!-- {{ csrf_field() }} -->
 	<label>#Players</label>
-	<select name="players">
+	<select name="players" required="required">
 		<?php for($i=1;$i<=6;$i++) { ?>
 		<option value="<?= $i?>"><?= $i?></option>
 		<?php } ?>
@@ -37,7 +38,7 @@
 	</div>    	    	    	    	
 	
 	<label>Admin Password</label>		
-	<input type="password" />		
+	<input type="password" required="required" />		
 	<input type="submit" />
 </form>
 

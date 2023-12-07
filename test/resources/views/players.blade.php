@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h4>Home > Players</h4><br/>
+<p>Home > Players</p><br/>
 @include('players_partial') 
 
 @endsection
