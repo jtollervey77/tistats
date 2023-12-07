@@ -2,7 +2,7 @@
 
 @section('content')
 	@if (isset($player))
-	<div class="grid">
+	<div class="grid-main">
 		<div class="box">
         	<p>Stats for <b>{{ $player->getName() }}</b></p>
         	<table class="table player_stats">        		
@@ -15,14 +15,12 @@
         	</table>
     	</div>
     	
-    	<div class="box">
+    	<div class="box box-shadow">
         	<b>Favourite Race(s) : </b><br/>{!! $player->getMostPlayed()?$player->getMostPlayed():"" !!}<br/><br/>
         	<b>Best Results As : </b><br/>{!! $player->getBestAs()?$player->getBestAs():"" !!}<br/><br/>
         	<b>Worst Results As : </b><br/>{!! $player->getWorstAs()?$player->getWorstAs():"" !!}<br/><br/>
     	</div>
-    	
-    	<div class="box">
-    	</div>
+    	    	
 	</div>
 	
 	<table class="table table-responsive tablesorter">
