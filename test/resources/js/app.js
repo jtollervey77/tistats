@@ -1,1 +1,5 @@
-import './bootstrap';
+
+$(function() {
+	$('.tablesorter').tablesorter({theme : "bootstrap"});
+});
+

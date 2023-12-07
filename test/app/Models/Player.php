@@ -113,4 +113,8 @@ class Player
         
         return $str;
     }
+    
+    public function getPlays() {
+        return count($this->games);
+    }
 }

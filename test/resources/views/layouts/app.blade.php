@@ -7,9 +7,14 @@
 
         <title>@yield('title')</title>
 
+		<script src="/resources/js/jquery-3.7.1.min.js"></script>		
+		<script src="/resources/js/jquery.tablesorter.min.js"></script>
+		<script src="/resources/js/app.js"></script>
+
         <!-- Styles -->        
         <link rel="stylesheet" type="text/css" href="/resources/css/app.css">
-        <link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.min.css">          
+        <link rel="stylesheet" type="text/css" href="/resources/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/resources/css/theme.bootstrap_4.min.css">                  
         
         <title>
         @isset($title)
@@ -21,11 +26,20 @@
     <body>
         <div class="">
         
-        	<div class="flex header">
+    		<div class="menu">        			        		                	
+                
+                <ul>
+                	<li><a href="/">Home</a></li>
+    				<li><a href="/factions">Factions</a></li>        				
+    				<li><a href="/players">Players</a></li>
+    				<li><a href="/events">Next Event</a></li>
+    				<li><a href="/strategy">Strategy Guides</a></li>
+    			</ul>
+            </div>
+        
+        	<div class="header">
         	
-        		<div class="flex">
-            		<a href="/"><img src="/resources/img/ti.png" /></a>
-            		
+        		<div class="form_container">            		            		
             		<form method="post">
                     	<label for="username">Username</label>
                     	<input name="username" type="text" />
@@ -37,15 +51,7 @@
                     </form>
 				</div>                    
         
-        		<div class="flex">        			        		                	
-                    
-                    <ul>
-        				<li><a href="/factions">Factions</a></li>        				
-        				<li><a href="/players">Players</a></li>
-        				<li><a href="/events">Next Event</a></li>
-        				<li><a href="/strategy">Strategy Guides</a></li>
-        			</ul>
-                </div>
+        
 			</div>                
             
             <div class="content">
@@ -53,8 +59,8 @@
             	@show            	
             </div>
             
-            <div class="footer">
-            	
+            <div class="footer">            	
+            	<img src="/resources/img/warsun.jpg" />
             </div>
         </div>
     </body>

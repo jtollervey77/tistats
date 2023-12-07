@@ -1,8 +1,5 @@
 * {font-family : "Open Sans", sans-serif}
 
-.header img {height:150px}
-.header li {display: inline-block; margin-right:20px;}
-
 .box {
 	padding : 20px;
 }
@@ -19,7 +16,7 @@
 }
 
 .flex > * {
-	padding :20px;
+	padding :2px;
 }
 
 .grid-main {
@@ -31,7 +28,7 @@
 
 .grid {
 	display: grid;
-	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-columns: 24% 24% 24% 24%;
 	grid-gap: 10px;
 	padding-bottom : 40px;
 }
@@ -46,11 +43,33 @@
    -webkit-box-orient: vertical;
 }
 
+.red {color:red}
+.green {color:forestgreen}
 
+
+
+.menu li {display: inline-block; margin-right:20px;}
+.menu {background-color: black; height:28px; padding:4px;}
+.menu ul {float:right; padding:4px;}
 
 .header {
 	border-bottom : 1px solid #ccc;
 	margin-bottom:20px;
+	background-image:  url("/resources/img/ti2.jpg");
+	background-size: cover;
+	min-height:200px;		
+}
+
+.header .form_container {
+	padding : 8px;					
+}
+
+.footer img {float: right; display: inline-block; height:80px}
+
+.menu a, .header label {
+	font-size: 16px;
+	font-weight: bold;
+	color:white!important;
 }
 
 .header form {
@@ -64,6 +83,11 @@
 }
 
 
+.faction {
+	background-color:  #ccc;
+	border-radius : 20px;
+	opacity: 0.9;
+}
 
 .faction .faction-img {	
 	height:80px;
@@ -74,6 +98,23 @@
 	
 	margin-bottom : 10px; 	
 }
+
+.faction a {
+	display: block;
+}
+.faction a:hover {
+	text-decoration: none;
+	opacity: 0.5;
+}
+.faction a >p:not(:first-of-type) {
+	color:black;
+}
+
+.strategy {padding:10px;margin-bottom:10px}
+
+.table_players {margin-bottom :40px!important;}
+
+table.player_stats td{width:150px;}
 
 .img-arborec {	
 	background-position: top -320px left -80px;		 	
@@ -154,6 +195,6 @@
 
 @media (max-width:640px) {
 	.grid {
-		grid-template-columns: 33% 33% 33%
+		grid-template-columns: 32% 32% 32% 32%
 	}	
 }

@@ -5,12 +5,14 @@
 	<div class="grid">
 		<div class="box">
         	<p>Stats for <b>{{ $player->getName() }}</b></p>
-        	<p>Wins : {{ $player->getWins() }} <br/>
-        	2nd : {{ $player->getPosition(2) }}<br/>
-        	3rd : {{ $player->getPosition(3) }}<br/>
-        	4th : {{ $player->getPosition(4) }}<br/>
-        	5th : {{ $player->getPosition(5) }}<br/>
-        	6th : {{ $player->getPosition(6) }}</p>
+        	<table class="table player_stats">        		
+        		<tr><td>Wins</td><td>{{ $player->getPosition(1) }}</td></tr>
+        		<tr><td>2nd</td><td>{{ $player->getPosition(2) }}</td></tr>
+        		<tr><td>3rd</td><td>{{ $player->getPosition(3) }}</td></tr>
+        		<tr><td>4th</td><td>{{ $player->getPosition(4) }}</td></tr>
+        		<tr><td>5th</td><td>{{ $player->getPosition(5) }}</td></tr>
+        		<tr><td>6th</td><td>{{ $player->getPosition(6) }}</td></tr>        		        	
+        	</table>
     	</div>
     	
     	<div class="box">
@@ -23,7 +25,8 @@
     	</div>
 	</div>
 	
-	<table class="table table-responsive">
+	<table class="table table-responsive tablesorter">
+	<thead>
 	<tr>
 		<th>Date</th>
 		<th>Players</th>
@@ -31,6 +34,8 @@
 		<th>Position</th>
 		<th>Points</th>
 	</tr>
+	</thead>
+	<tbody>
 	@foreach ($player->getGames() as $datum)
 	<tr>
 		<td>{{ $datum->date }}</td>
@@ -38,8 +43,9 @@
 		<td>{{ $datum->faction }} {{ $datum->pok?'(POK)':'' }}</td>
 		<td>{{ $datum->position }}</td>
 		<td>{{ $datum->points }}</td>
-	</tr>
+	</tr>	
 	@endforeach
+	</tbody>
 	</table>
 		
 	@else

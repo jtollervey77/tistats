@@ -7,7 +7,7 @@
 
 <div class="">
 	@foreach ($factions as $datum)
-	<div class="flex faction">
+	<div class="faction strategy">
 		<div>
 			<div class="faction-img img-{{ $datum->getURLName() }}"></div>
 			<p><a href="/faction/{{ $datum->getURLName() }}">{{ $datum->getName() }}</a></p>
@@ -20,9 +20,6 @@
 				</span>
 			</p>
 			@endforeach		
-		</div>
-		<div>
-			<h4>Guides</h4>
 		</div>			
 	</div>	
 	@endforeach
