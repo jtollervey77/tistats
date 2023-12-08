@@ -61,10 +61,10 @@ input.small {width:100px}
 .header {
 	border-bottom : 1px solid #ccc;
 	margin-bottom:20px;
-	background-image:  url("/resources/img/ti2.jpg");
+	background-image:  url("/resources/img/ti.png");
 	background-size: cover;
-	min-height:246px;
-	background-position-y: -34px;		
+	min-height:260px;
+	background-position-y: -40px;		
 }
 
 .header .form_container {
