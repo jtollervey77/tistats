@@ -71,7 +71,7 @@ input.small {width:100px}
 	padding : 8px;					
 }
 
-.menu a, .header label {
+.top-nav a {
 	font-size: 16px;
 	font-weight: bold;
 	color:white!important;

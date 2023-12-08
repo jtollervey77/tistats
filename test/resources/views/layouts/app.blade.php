@@ -27,14 +27,14 @@
     </head>
     <body>                  
         <section class="top-nav">
-            <div>              
+            <div class="">            
+            	<a href="/">Home</a>  
             </div>
             <input id="menu-toggle" type="checkbox" />
             <label class='menu-button-container' for="menu-toggle">
             	<div class='menu-button'></div>
           	</label>
-            <ul class="menu">
-              	<li><a href="/">Home</a></li>
+            <ul class="menu">              	
             	<li><a href="/factions">Factions</a></li>        				
             	<li><a href="/players">Players</a></li>
             	<li><a href="/events">Next Event</a></li>
