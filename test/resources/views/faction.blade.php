@@ -3,18 +3,20 @@
 @section('content')
 	@if (isset($faction))
 	
-	<div class="grid">
+	<div class="grid-main">
 		<div class="box">
-    		<p>Stats for <b>{{ $faction->getName() }}</b></p>
-    		<p>Wins : {{ $faction->getWins() }} <br/>
-        	2nd : {{ $faction->getPosition(2) }}<br/>
-        	3rd : {{ $faction->getPosition(3) }}<br/>
-        	4th : {{ $faction->getPosition(4) }}<br/>
-        	5th : {{ $faction->getPosition(5) }}<br/>
-        	6th : {{ $faction->getPosition(6) }}</p>
+        	<p>Stats for <b>{{ $faction->getName() }}</b></p>
+        	<table class="table player_stats">        		
+        		<tr><td>Wins</td><td>{{ $faction->getPosition(1) }}</td></tr>
+        		<tr><td>2nd</td><td>{{ $faction->getPosition(2) }}</td></tr>
+        		<tr><td>3rd</td><td>{{ $faction->getPosition(3) }}</td></tr>
+        		<tr><td>4th</td><td>{{ $faction->getPosition(4) }}</td></tr>
+        		<tr><td>5th</td><td>{{ $faction->getPosition(5) }}</td></tr>
+        		<tr><td>6th</td><td>{{ $faction->getPosition(6) }}</td></tr>        		        	
+        	</table>
     	</div>
     	
-    	<div class="box">
+    	<div class="box box-shadow">
     		<b>Most Played By : </b><br/>{!! $faction->getMostPlayed()?$faction->getMostPlayed():"" !!}<br/><br/>
         	<b>Best Results By : </b><br/>{!! $faction->getBestAs()?$faction->getBestAs():"" !!}<br/><br/>
         	<b>Worst Results By : </b><br/>{!! $faction->getWorstAs()?$faction->getWorstAs():"" !!}<br/><br/>
