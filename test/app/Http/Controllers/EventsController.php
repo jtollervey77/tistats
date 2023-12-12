@@ -11,7 +11,8 @@ use App\Models\Faction;
 class EventsController extends Controller
 {
 	
-    public function index() : view {
+    public function index() : view 
+    {
         
         $players = DB::select('select * from player order by name ASC');                
         $factions = DB::select('SELECT *, trim(replace(name, "The", "")) as sortname from faction order by sortname ASC');        

@@ -17,7 +17,8 @@ class Faction
     
     public readonly int $id;
     
-    public function __construct(Object $record, bool $withStats = false) {
+    public function __construct(Object $record, bool $withStats = false) 
+    {
         
         $this->name = $record->name;
         $this->id = $record->id;
@@ -38,7 +39,8 @@ class Faction
         }
     }    
     
-    public function getDeviation() : int {
+    public function getDeviation() : int 
+    {
         $deviation = 0;
         if(!$this->deviation) $this->figureDeviation("player");
         
@@ -49,11 +51,13 @@ class Faction
         return $deviation;
     }
     
-    public function getName() : String {
+    public function getName() : String 
+    {
         return $this->name;
     }
     
-    public function getURLName() : String {
+    public function getURLName() : String 
+    {
         return urlencode(strtolower($this->shortName));
     }
     
@@ -61,17 +65,20 @@ class Faction
         return $this->games;
     }
     
-    public function getWins() : ?int {
+    public function getWins() : ?int 
+    {
         
         return $this->getPosition(1);
     }
     
-    public function getPosition(int $position) {
+    public function getPosition(int $position) 
+    {
         
         return isset($this->positions[$position]) ? $this->positions[$position] : 0;
     }
     
-    public function getMostPlayed() : bool|String {
+    public function getMostPlayed() : bool|String 
+    {
         
         $data = array();
         
@@ -94,7 +101,8 @@ class Faction
         return $str;
     }
     
-    public function getBestAs() : bool|String {
+    public function getBestAs() : bool|String 
+    {
         
         if(!$this->deviation) $this->figureDeviation("player");
         
@@ -112,7 +120,8 @@ class Faction
         return $str;
     }
     
-    public function getWorstAs() : bool|String {
+    public function getWorstAs() : bool|String 
+    {
         
         if(!$this->deviation) $this->figureDeviation("player");
         
@@ -129,7 +138,8 @@ class Faction
         return $str;
     }
     
-    public function getGuides() : array {
+    public function getGuides() : array 
+    {
 
         $records = DB::select('select * from guide '.
             ' where fk_faction_id = ?', array($this->id));

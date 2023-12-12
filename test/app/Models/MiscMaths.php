@@ -8,7 +8,8 @@ trait MiscMaths
     /*
      * ok this figures out how far away form the mid point each result is
      */
-    private function figureDeviation(String $field) : void {
+    private function figureDeviation(String $field) : void 
+    {
         
         $data = array();
         

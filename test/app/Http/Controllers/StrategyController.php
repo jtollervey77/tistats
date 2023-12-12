@@ -11,7 +11,8 @@ use App\Models\Faction;
 class StrategyController extends Controller
 {
 	
-    public function index() : view {
+    public function index() : view 
+    {
         
         $records = DB::select('SELECT *, trim(replace(name, "The", "")) as sortname from faction order by sortname ASC');
         $factions = array();
