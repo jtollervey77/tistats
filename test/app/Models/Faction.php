@@ -61,7 +61,8 @@ class Faction
         return urlencode(strtolower($this->shortName));
     }
     
-    public function getGames() : array {
+    public function getGames() : array 
+    {
         return $this->games;
     }
     
